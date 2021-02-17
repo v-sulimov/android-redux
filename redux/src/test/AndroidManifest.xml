@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vsulimov.redux">
+
+    <application
+        android:label="Redux"
+        android:theme="@style/Theme.AppCompat">
+
+        <activity android:name="com.vsulimov.android.TestActivity" />
+
+    </application>
+
+</manifest>
