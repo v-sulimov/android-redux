@@ -1,0 +1,28 @@
+<templateSet group="redux">
+  <template name="action" value="import com.vsulimov.redux.Action&#10;&#10;sealed class $ActionName$ : Action {}" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="ActionName" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="reducer" value="import com.vsulimov.redux.Action&#10;import com.vsulimov.redux.Reducer&#10;&#10;object $ReducerName$ : Reducer&lt;$StateName$&gt; {&#10;&#10;    override fun reduce(action: Action, state: ApplicationState): ApplicationState =&#10;        when (action) {&#10;            else -&gt;&#10;                state&#10;        }&#10;}" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="ReducerName" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="StateName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="store" value="import com.vsulimov.redux.AbstractStore&#10;import com.vsulimov.redux.Middleware&#10;import com.vsulimov.redux.Reducer&#10;&#10;class ApplicationStore(&#10;    initialState: $StateName$,&#10;    middlewares: List&lt;Middleware&lt;$StateName$&gt;&gt;,&#10;    reducers: List&lt;Reducer&lt;$StateName$&gt;&gt;&#10;) : AbstractStore&lt;$StateName$&gt;(initialState, middlewares, reducers)" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="StateName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="middleware" value="import com.vsulimov.redux.Action&#10;import com.vsulimov.redux.Middleware&#10;import com.vsulimov.redux.Next&#10;&#10;object $MiddlewareName$ : Middleware&lt;$StateName$&gt; {&#10;&#10;    override fun handleAction(&#10;        action: Action,&#10;        state: ApplicationState,&#10;        next: Next&lt;ApplicationState&gt;&#10;    ): Action {&#10;        val newAction = when (action) {&#10;            else -&gt;&#10;                action&#10;        }&#10;        return next(newAction, state)&#10;    }&#10;}" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="MiddlewareName" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="StateName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+</templateSet>

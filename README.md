@@ -116,6 +116,14 @@ Also, if you ever want to write your implementation of the
 Store or AppCompatActivity it's a good idea to make sure that
 these tests also pass for your implementation.
 
+## Android Studio integration
+This repository contains the Live Templates configuration file for faster code writing
+for Store, Actions, Middlewares, and Reducers.
+Copy the ./android-studio/templates/redux.xml file to the templates directory
+of your IDE configuration (the exact path depends on your OS).
+After that, you can use the store, action, middleware, and reducer abbreviations to
+insert the appropriate live template.
+
 ## License
 <pre>
 Licensed under the Apache License, Version 2.0 (the "License");
