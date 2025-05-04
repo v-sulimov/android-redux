@@ -29,6 +29,10 @@ android {
         jvmTarget = "11"
     }
 
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+    }
+
     publishing {
         singleVariant("release") {
             withSourcesJar()
@@ -38,6 +42,11 @@ android {
 }
 
 dependencies {
+    implementation(libs.kotlinx.coroutines.android)
+
+    testImplementation(libs.kotlin.test)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.mockito.kotlin)
 }
 
 publishing {
@@ -56,8 +65,8 @@ publishing {
                     description = "A predictable state container for Android apps."
                     licenses {
                         license {
-                            name = "The Apache License, Version 2.0"
-                            url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                            name = "The MIT License (MIT)"
+                            url = "https://mit-license.org/"
                         }
                     }
                     developers {
