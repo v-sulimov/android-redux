@@ -1,9 +1,9 @@
 [versions]
 agp = "8.13.0"
-kotlin = "2.2.20"
+kotlin = "2.2.21"
 coroutines = "1.10.2"
 kotlin-test = "2.2.0"
-mockito-kotlin = "6.0.0"
+mockito-kotlin = "6.1.0"
 
 [libraries]
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
