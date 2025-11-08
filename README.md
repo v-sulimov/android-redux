@@ -34,7 +34,7 @@ dependencyResolutionManagement {
 
 ```kotlin
 dependencies {
-    implementation("com.vsulimov:redux:1.0.3")
+    implementation("com.vsulimov:redux:1.0.4")
 }
 ```
 

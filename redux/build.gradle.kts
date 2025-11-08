@@ -55,7 +55,7 @@ publishing {
             create<MavenPublication>("release") {
                 groupId = "com.vsulimov"
                 artifactId = "redux"
-                version = "1.0.3"
+                version = "1.0.4"
 
                 from(components["release"])
 
